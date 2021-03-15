@@ -1,0 +1,36 @@
+﻿@{
+
+}
+
+<div class="col-12">
+    <div class="alert alert-info" id="info" style="display:none" role="alert">
+    </div>
+    <div class="alert alert-danger" id="err" style="display:none" role="alert">
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <input type="button" id="prodBtn" class="btn btn-info" value="Load products json from site" />
+    </div>
+    <div class="card-body" id="productsJson"></div>
+    <div class="card-footer">
+        <input type="button" style="display:none" id="prodSaveBtn" class="btn btn-success" value="Insert products to db" />
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <input type="button" id="storeBtn" class="btn btn-info" value="Load stores json from site" />
+    </div>
+    <div class="card-body" id="storesJson">
+
+    </div>
+    <div class="card-footer">
+        <input type="button" style="display:none" id="storeSaveBtn" class="btn btn-success"
+               value="Insert stores to db" />
+
+    </div>
+</div>
+
+<script src="~/js/vetDirectoryScripts/vetDirectory.js"></script>

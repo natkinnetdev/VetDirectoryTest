@@ -1,0 +1,26 @@
+﻿@model List<WebApplication2.Entities.Product>
+
+<div class="col-lg-12">
+    <input type="button" onclick="location.href='@Url.Action("DeleteAllProducts", "Home")'" class="btn btn-info" value="Clear Products"/>
+</div><br />
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>ProductUrl</th>
+    </tr>
+    @if (Model != null)
+    {
+
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Name</td>
+                <td><img style="width:200px; height:200px;" src="@i.ImageUrl"/></td>
+                <td><a href="@i.ProductUrl">@i.ProductUrl</a></td>
+            </tr>
+        }
+
+    }
+
+</table>

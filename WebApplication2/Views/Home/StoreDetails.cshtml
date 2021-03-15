@@ -1,0 +1,41 @@
+﻿@model List<WebApplication2.Entities.Store>
+
+<div class="col-lg-12">
+    <input type="button" onclick="location.href='@Url.Action("DeleteAllStores", "Home")'" class="btn btn-info" value="Clear Stores" />
+</div><br />
+<table class="table table-striped">
+    <tr>
+        <th>@Html.LabelFor(m => Model.First().Name)</th>
+        <th>@Html.LabelFor(m => Model.First().City)</th>
+        <th>@Html.LabelFor(m => Model.First().CountryCode)</th>
+        <th>@Html.LabelFor(m => Model.First().PostalCode)</th>
+        <th>@Html.LabelFor(m => Model.First().MainAddress)</th>
+        <th>@Html.LabelFor(m => Model.First().AdditionalAddress)</th>
+        <th>@Html.LabelFor(m => Model.First().Distance)</th>
+        <th>@Html.LabelFor(m => Model.First().Latitude)</th>
+        <th>@Html.LabelFor(m => Model.First().Longitude)</th>
+        @*<th>@Html.LabelFor(m => Model.First().HideOnDirectory)</th>*@
+    </tr>
+    @if (Model != null)
+    {
+
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Name</td>
+                <td class="bg-info">@i.City</td>
+                <td>@i.CountryCode</td>
+                <td class="bg-info">@i.PostalCode</td>
+                <td>@i.MainAddress</td>
+                <td class="bg-info">@i.AdditionalAddress</td>
+                <td>@i.Distance</td>
+                <td class="bg-info">@i.Latitude</td>
+                <td>@i.Longitude</td>
+                @*<td class="bg-info">@i.HideOnDirectory</td>*@
+
+            </tr>
+        }
+
+    }
+
+</table>
